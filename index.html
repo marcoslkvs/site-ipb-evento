@@ -15,29 +15,40 @@
     <div id="app">
         <header>
             <div class="row">
-                <div class="col xl7 l7 m7 s12 img-bg">
+                <div class="col xl7 l12 m12 s12 img-bg">
                     <img src="assets/media/img/bottom-gray.png" class="bottom-img-bg" alt="">
                 </div>
-                <div class="col xl5 l5 m5 s12 pleft40 ptop100 pbottom100     ">
+                <div class="col xl5 l12 m12 s12 pleft40 ptop100 pbottom100" id="infos-lateral">
+                    <div class="position-infos">
+                        <hr class="hr-data-event" align="left">
+                        <p class="data-event mtop10 mbottom10">25 e 26<br>NOVEMBRO 2017</p>
+                        <button class="btn mtop10 btn-inscription">Inscrever-se</button>
+                        <p class="vacancies-event">*Somente 70 vagas</p>
+                        <img src="assets/media/gif/scroll-down.gif" class="scroll-down" alt="">
+                    </div>
+                </div>
+                <div class="col xl4 l4 m4 s12 offset-m2 offset-l2 offset-xl2 pleft40 ptop30 infos-bottom">
                     <hr class="hr-data-event" align="left">
                     <p class="data-event mtop10 mbottom10">25 e 26<br>NOVEMBRO 2017</p>
+                </div>  
+                 <div class="col xl6 l6 m6 s12 pleft40 ptop30  infos-bottom" >
                     <button class="btn mtop10 btn-inscription">Inscrever-se</button>
                     <p class="vacancies-event">*Somente 70 vagas</p>
-                    <img src="assets/media/gif/scroll-down.gif" class="scroll-down" alt="">
                 </div>
             </div>
+           
         </header>
 
-        <section id="about" class="ptop100 pbottom100 ">
+        <section id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col s12 m5 l5 xl5">
-                        <h4>Sobre o evento</h4>
+                    <div class="col s12 m6 l6 xl6">
+                        <h3>Sobre o evento</h3>
                         <hr align="left" width="5%" color="#FABD3A">
                         <p class="text-justify">{{sobreEvento}}</p>
                     </div>
                     <div class="col s0 m1 l1 xl1"></div>
-                    <div class="col s10  m6 l6 xl6 ptop40" >
+                    <div class="col s10  m5 l5 xl5 ptop70" >
                         <div class="slick">
                             <list-pictures v-for="picture in pictures" :picture="picture" ></list-pictures>
                         </div>
@@ -46,27 +57,66 @@
             </div>
         </section>
 
-        <div class="row">
-            <div class="container">
-
-            </div>
+        <div class="divider">
+            <img src="assets/media/img/mountains.png"  class="responsive-img" alt="" />
         </div>
-
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.12891521589108!2d-45.94625107130177!3d-21.426782601592762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f5a5f1581fd9%3A0xd665816a9872c063!2sIgreja+Presbiteriana+de+Alfenas!5e0!3m2!1sen!2sbr!4v1509682520325" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
         
-        <section id="organization" class="ptop100 pbottom100">
+        <section id="whoWillBe" class="ptop40 pbottom20 bg-orange-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l12 xl12 text-center">
+                        <h3>Quem vai estar lá</h3>
+                        <hr align="center" width="5%" color="#FABD3A">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programation" class="ptop100 pbottom40 bg-orange-light">
+                <div class="container">
+                    <div class="row">
+                            <div class="col s12 m12 l12 xl12 text-center">
+                                 <h3>Programação</h3>
+                                <hr align="center" width="5%" color="#FABD3A">
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+        <div class="divider ">
+            <img src="assets/media/img/mountains2.png" class="responsive-img mbottom10n" alt="" />
+        </div>
+            
+    
+        <section id="organization" class="ptop20 pbottom20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 x12 m12 l12 text-center">
+                            <h3>Local</h3>
+                            <hr align="center" width="5%" color="#FABD3A">
+                            <p><i class="fa fa-map-marker mright5" aria-hidden="true"></i>Av. São José, 1306
+                            <br>Centro, Alfenas - MG, 37130-000
+                            <br><i class="fa fa-phone mright5" aria-hidden="true"></i>(35) 3292-2331</p>
+                            <a title="Ver direção no Google Maps" href="https://www.google.com.br/maps/place/Igreja+Presbiteriana+de+Alfenas/@-21.4267248,-45.9483445,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd665816a9872c063!8m2!3d-21.4267295!4d-45.9461573" target="_blanck">
+                                <i class="fa fa-location-arrow fa-3x" aria-hidden="true"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>    
+
+        <section id="organization" class="ptop20 pbottom100">
             <div class="container">
                 <div class="row">
                     <div class="col s12 x12 ml2 l12 center-align">
-                        <h4>Organização</h4>
+                        <h3>Organização</h3>
                         <hr align="center" width="5%" color="#FABD3A">
                         <div class="col offset-m2 offset-l2 offset-xl2"></div>
                         <list-organizations v-for="organization in organizations" :organization="organization"></list-organizations>
                     </div>
                 </div>
             </div>
-
         </section>
     </div> 
     <script src="assets/js/jquery-3.2.1.min.js"></script>

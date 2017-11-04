@@ -1,6 +1,6 @@
 Vue.component('list-organizations',{
     template: 
-        "<div class=\"col s12 m4 l4 xl4\"><img :src=\"organization.url\" class=\"responsive-img\" /></div>"
+        "<div class=\"col s8 offset-s2 m4 l4 xl4\"><img :src=\"organization.url\" class=\"responsive-img mtop30\" /></div>"
     ,
     props: ['organization']
 });
