@@ -1,0 +1,113 @@
+@font-face
+{
+    font-family: Trade20;
+    src: url('../fonts/TradeGothicLTPro.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: futuramedium;
+    src: url('../fonts/FuturaPTMedium.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body
+{
+    background: url('../media/img/bg-gray.png') repeat;
+    overflow-x: hidden;     
+    font-family: Trade20;  
+    color: #6a735b; 
+}
+p {
+    font-size: 16px;
+}
+.img-bg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../media/img/teste.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+.bottom-img-bg
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+}
+.hr-data-event
+{
+    width: 80px;
+    height: 3px;
+    background-color: #6a735b;
+}
+.data-event
+{
+    font-size: 38px;
+}
+.btn-inscription
+{  
+    background: #FFB94B; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #DB4138, #FFB94B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left top, #DB4138, #FFB94B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left top, #DB4138, #FFB94B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left top, #DB4138, #FFB94B); /* Standard syntax */
+    width: 220px;
+    height: 73px;
+    font-size: 17px;
+}
+.scroll-down
+{
+    width: 50px;
+    height: auto;
+}
+
+.text-justify
+{
+    text-align: justify;
+}
+.vacancies-event
+{
+    margin-top:24px;
+    font-family: futuramedium;
+    font-size: 15px;
+}
+
+
+
+
+
+
+.pleft40
+{
+    padding-left: 40px !important;
+}
+.pleft5
+{
+    padding-left: 5px !important;
+}
+.ptop100
+{
+    padding-top: 100px !important;
+}
+.ptop40
+{
+    padding-top: 40px !important;
+}
+
+.pbottom100
+{
+    padding-bottom: 100px !important;
+}
+
+.mtop10
+{
+    margin-top: 10px;
+}
+.mbottom10
+{
+    margin-bottom: 10px;
+}
