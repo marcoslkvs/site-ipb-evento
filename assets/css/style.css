@@ -48,6 +48,12 @@ body
 p {
     font-size: 1.4rem;
 }
+label{
+    font-size: 1.4rem;
+}
+span{
+    color: red; 
+}
 .img-bg{
     width: 100vw;
     height: 100vh;
@@ -81,7 +87,7 @@ p {
     background: -moz-linear-gradient(left top, #DB4138, #FFB94B); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to left top, #DB4138, #FFB94B); /* Standard syntax */
     width: 220px;
-    height: 73px;
+    height: 53px;
     font-size: 17px;
 }
 .scroll-down

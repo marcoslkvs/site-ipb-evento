@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="materialize/css/materialize.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">    
+    <link rel="stylesheet" href="assets/css/iziToast.min.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -22,7 +24,7 @@
                     <div class="position-infos">
                         <hr class="hr-data-event" align="left">
                         <p class="data-event mtop10 mbottom10">25 e 26<br>NOVEMBRO 2017</p>
-                        <button class="btn mtop10 btn-inscription">Inscrever-se</button>
+                        <button class="btn mtop10 btn-inscription">Inscreva-se</button>
                         <p class="vacancies-event">*Somente 70 vagas</p>
                         <img src="assets/media/gif/scroll-down.gif" class="scroll-down" alt="">
                     </div>
@@ -61,7 +63,7 @@
             <img src="assets/media/img/mountains.png"  class="responsive-img" alt="" />
         </div>
         
-        <section id="whoWillBe" class="ptop40 pbottom20 bg-orange-light">
+        <section v-show="false" id="whoWillBe" class="ptop20 pbottom40 bg-orange-light">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m12 l12 xl12 text-center">
@@ -78,6 +80,8 @@
                             <div class="col s12 m12 l12 xl12 text-center">
                                  <h3>Programação</h3>
                                 <hr align="center" width="5%" color="#FABD3A">
+                                <img src="assets/media/gif/load.gif" class="rsponsive-img mtop10 " alt="">
+                                <h4 class="pbottom20">Em breve ...</h4>
                             </div>
                     </div>
                 </div>
@@ -88,15 +92,14 @@
         </div>
             
     
-        <section id="organization" class="ptop20 pbottom20">
+        <section id="location" class="ptop20 pbottom20">
                 <div class="container">
                     <div class="row">
                         <div class="col s12 x12 m12 l12 text-center">
                             <h3>Local</h3>
                             <hr align="center" width="5%" color="#FABD3A">
                             <p><i class="fa fa-map-marker mright5" aria-hidden="true"></i>Av. São José, 1306
-                            <br>Centro, Alfenas - MG, 37130-000
-                            <br><i class="fa fa-phone mright5" aria-hidden="true"></i>(35) 3292-2331</p>
+                            <br>Centro, Alfenas - MG, 37130-000</p>
                             <a title="Ver direção no Google Maps" href="https://www.google.com.br/maps/place/Igreja+Presbiteriana+de+Alfenas/@-21.4267248,-45.9483445,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd665816a9872c063!8m2!3d-21.4267295!4d-45.9461573" target="_blanck">
                                 <i class="fa fa-location-arrow fa-3x" aria-hidden="true"></i>
                             </a>
@@ -106,7 +109,7 @@
                 </div>
             </section>    
 
-        <section id="organization" class="ptop20 pbottom100">
+        <section id="organization" class="ptop40 pbottom20">
             <div class="container">
                 <div class="row">
                     <div class="col s12 x12 ml2 l12 center-align">
@@ -118,6 +121,48 @@
                 </div>
             </div>
         </section>
+
+        <section id="organization" class="ptop40 pbottom100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 x12 ml2 l12 center-align">
+                            <h3>Inscrição</h3>
+                            <hr align="center" width="5%" color="#FABD3A">
+                            <p>Preencha esse formulário para fazer sua inscrição. Depois de preenchido e recebido pos nós, enviaremos um email passando informações para pagamento.</p>
+                        </div>
+                        <div class="col s12 m6 l6 xl6 ptop40">   
+                            <form id="form-inscription" method="POST">    
+                                <div class="input-field ">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="name" type="text" required class="validate">
+                                    <label for="name" data-error="Preenche este campo com seu nome completo" >Nome Completo <span>*</span></label>
+                                </div>  
+                                <div class="input-field">
+                                    <i class="fa fa-calendar prefix" aria-hidden="true"></i>
+                                    <input id="age"  type="number"  required  class="validate">
+                                    <label for="age" >Idade <span>*</span></label>
+                                </div>      
+                                <div class="input-field">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="mail"  type="email" required  class="validate">
+                                    <label for="mail" >Email <span>*</span></label>
+                                </div>    
+                                <div class="input-field">
+                                    <i class="material-icons prefix">location_city</i>
+                                    <input id="city"  type="text" required  class="validate">
+                                    <label for="city" >Cidade <span>*</span></label>
+                                </div>      
+                                <div class="input-field">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="phone" type="number"  required class="validate">
+                                    <label for="phone" >Telefone <span>*</span></label>
+                                </div>    
+                                <button type="submit" class="btn mtop10 ptop20 btn-inscription">Inscrever-se</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </div> 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="materialize/js/materialize.min.js"></script>
@@ -125,7 +170,9 @@
     <script src="assets/js/components.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="slick/slick.min.js"></script>    
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>  
+    <script src="assets/js/envio-form.js"></script>
+    <script src="assets/js/iziToast.min.js"></script>
 
 
 

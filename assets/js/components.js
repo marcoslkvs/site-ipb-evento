@@ -11,3 +11,4 @@ Vue.component('list-pictures',{
     ,
     props: ['picture']
 });
+
