@@ -1,7 +1,7 @@
                                                                                                                                                                 <!DOCTYPE html>
 <html lang="pt_br">
 <head>    
-    <title>{{title}}</title>
+    <title>FMRL | Congresso 2017</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,20 +11,48 @@
     <link rel="stylesheet" href="assets/css/iziToast.min.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/material-icons.css" rel="stylesheet">
+    <link href="assets/media/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
     <div id="app">
+        <a href="body" id="btn-up-page-box" class="effect-scroll">
+            <i class="fa fa-chevron-up fa-1x" aria-hidden="true"></i>
+        </a>
         <header>
+            <div class="navbar-fixed">
+                <nav id="nav" >
+                  <div class="nav-wrapper nav">
+                    <a  data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="center hide-on-med-and-down">
+                      <li><a href="#about" class="effect-scroll">Sobre</a></li>
+                      <li><a href="#lectures" class="effect-scroll">Prelecionistas</a></li>
+                      <li><a href="#programation" class="effect-scroll">Programação</a></li>
+                      <li><a href="#location" class="effect-scroll">Local</a></li>
+                      <li><a href="#organization" class="effect-scroll">Organização</a></li>
+                      <li><a href="#inscription" class="effect-scroll">Inscreva-se</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="#about" class="effect-scroll">Sobre</a></li>
+                        <li><a href="#programation" class="effect-scroll">Programação</a></li>
+                        <li><a href="#location" class="effect-scroll">Local</a></li>
+                        <li><a href="#organization" class="effect-scroll">Organização</a></li>
+                        <li><a href="#organization" class="effect-scroll">Organização</a></li>
+                        <li><a href="#inscription" class="effect-scroll">Inscreva-se</a></li>
+                    </ul>
+                  </div>
+                </nav>
+            </div>
             <div class="row">
                 <div class="col xl7 l12 m12 s12 img-bg">
                     <img src="assets/media/img/bottom-gray.png" class="bottom-img-bg" alt="">
+                    <a href="#about" class="effect-scroll angle-position "><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a>
                 </div>
                 <div class="col xl5 l12 m12 s12 pleft40 ptop100 pbottom100" id="infos-lateral">
                     <div class="position-infos">
                         <hr class="hr-data-event" align="left">
                         <p class="data-event mtop10 mbottom10">25 e 26<br>NOVEMBRO 2017</p>
-                        <button class="btn mtop10 btn-inscription">Inscreva-se</button>
+                        <a href="#inscription" class="btn mtop10  effect-scroll btn-inscription">Inscreva-se</a>
                         <p class="vacancies-event">*Somente 70 vagas</p>
                         <img src="assets/media/gif/scroll-down.gif" class="scroll-down" alt="">
                     </div>
@@ -63,12 +91,14 @@
             <img src="assets/media/img/mountains.png"  class="responsive-img" alt="" />
         </div>
         
-        <section v-show="false" id="whoWillBe" class="ptop20 pbottom40 bg-orange-light">
+        <section  id="lectures" class="ptop40 pbottom20 bg-orange-light">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m12 l12 xl12 text-center">
-                        <h3>Quem vai estar lá</h3>
+                        <h3>Prelecionistas</h3>
                         <hr align="center" width="5%" color="#FABD3A">
+                        <div class="col s12 m2"></div>
+                        <list-lectures v-for="lecture in lectures" :lecture="lecture"></list-lectures>
                     </div>
                 </div>
             </div>
@@ -121,16 +151,19 @@
                 </div>
             </div>
         </section>
-
-        <section id="organization" class="ptop40 pbottom100">
+        <div class="divider">
+            <img src="assets/media/img/mountains3.png"  class="responsive-img" alt="" />
+        </div>
+        
+        <section id="inscription" class="ptop20 pbottom20 bg-brown-light">
                 <div class="container">
                     <div class="row">
                         <div class="col s12 x12 ml2 l12 center-align">
-                            <h3>Inscrição</h3>
+                            <h3>Inscreva-se</h3>
                             <hr align="center" width="5%" color="#FABD3A">
                             <p>Preencha esse formulário para fazer sua inscrição. Depois de preenchido e recebido pos nós, enviaremos um email passando informações para pagamento.</p>
                         </div>
-                        <div class="col s12 m6 l6 xl6 ptop40">   
+                        <div class="col s12 m8 l8 xl8 offset-m2 offset-xl2 offset-l2 ptop40">   
                             <form id="form-inscription" method="POST">    
                                 <div class="input-field ">
                                     <i class="material-icons prefix">account_circle</i>
@@ -157,16 +190,30 @@
                                     <input id="phone" type="number"  required class="validate">
                                     <label for="phone" >Telefone <span>*</span></label>
                                 </div>    
-                                <button type="submit" class="btn mtop10 ptop20 btn-inscription">Inscrever-se</button>
+                                <button type="submit" class="btn mtop10 ptop20 btn-inscription-submit">Inscrever-se</button>
                             </form>
+                        </div>
+                        <div class="col s12 m6 l6 xl6 ptop40"> 
+                             
                         </div>
                     </div>
                 </div>
         </section>
+        <div class="divider">
+            <img src="assets/media/img/mountains4.png"  class="responsive-img mbottom10n" alt="" />
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="row text-center">
+                    <p class="credits">Copyright 2017 - <a href="https://www.linkedin.com/in/marcos-lucs" target="_blanck">Marcos Lucas Rios</a></p>
+                </div>
+            </div>
+        </footer>
     </div> 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="materialize/js/materialize.min.js"></script>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="assets/js/vue.js"></script>
     <script src="assets/js/components.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="slick/slick.min.js"></script>    

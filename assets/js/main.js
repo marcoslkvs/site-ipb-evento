@@ -4,3 +4,29 @@ $('.slick').slick({
     autoplay: true,
     autoplaySpeed: 4000,
   });
+
+$(".effect-scroll").on("click",function(event)
+{
+	event.preventDefault();
+  var id = $(this).attr("href");
+  $("html,body").animate(
+  {
+    scrollTop: $(id).offset().top - $("nav").height()
+  }, 1500);
+})
+
+$(".button-collapse").sideNav();
+
+$(window).scroll(function()
+{
+  var position_scroll = $(window).scrollTop();
+  if(position_scroll >= 150)
+  {
+    $("#nav").fadeIn();
+    $("#btn-up-page-box").fadeIn();
+  }
+  else{
+    $("#nav").fadeOut();
+    $("#btn-up-page-box").fadeOut();
+  }
+});

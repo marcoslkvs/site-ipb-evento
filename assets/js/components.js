@@ -12,3 +12,9 @@ Vue.component('list-pictures',{
     props: ['picture']
 });
 
+Vue.component('list-lectures',{
+    template: 
+    "<div class=\"col s8 offset-s2 m4 l4 xl4 ptop40\"><h4>{{lecture.name}}</h4><p>{{lecture.office}}</p></div>"
+    ,
+    props: ['lecture']
+});
