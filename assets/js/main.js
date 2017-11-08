@@ -19,6 +19,11 @@ $(".button-collapse").sideNav();
 
 $(window).scroll(function()
 {
+  checkMenuVisibility();
+});
+
+function checkMenuVisibility()
+{
   var position_scroll = $(window).scrollTop();
   if(position_scroll >= 150)
   {
@@ -29,4 +34,9 @@ $(window).scroll(function()
     $("#nav").fadeOut();
     $("#btn-up-page-box").fadeOut();
   }
-});
+}
+
+$(document).ready(function()
+{
+  $("#nav").hide();
+})

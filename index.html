@@ -26,7 +26,7 @@
                     <a  data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="center hide-on-med-and-down">
                       <li><a href="#about" class="effect-scroll">Sobre</a></li>
-                      <li><a href="#lectures" class="effect-scroll">Prelecionistas</a></li>
+                      <li><a href="#lectures" class="effect-scroll">Preletores</a></li>
                       <li><a href="#programation" class="effect-scroll">Programação</a></li>
                       <li><a href="#location" class="effect-scroll">Local</a></li>
                       <li><a href="#organization" class="effect-scroll">Organização</a></li>
@@ -34,6 +34,7 @@
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
                         <li><a href="#about" class="effect-scroll">Sobre</a></li>
+                        <li><a href="#lectures" class="effect-scroll">Preletores</a></li>
                         <li><a href="#programation" class="effect-scroll">Programação</a></li>
                         <li><a href="#location" class="effect-scroll">Local</a></li>
                         <li><a href="#organization" class="effect-scroll">Organização</a></li>
@@ -95,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12 m12 l12 xl12 text-center">
-                        <h3>Prelecionistas</h3>
+                        <h3>Preletores</h3>
                         <hr align="center" width="5%" color="#FABD3A">
                         <div class="col s12 m2"></div>
                         <list-lectures v-for="lecture in lectures" :lecture="lecture"></list-lectures>
@@ -161,7 +162,9 @@
                         <div class="col s12 x12 ml2 l12 center-align">
                             <h3>Inscreva-se</h3>
                             <hr align="center" width="5%" color="#FABD3A">
-                            <p>Preencha esse formulário para fazer sua inscrição. Depois de preenchido e recebido pos nós, enviaremos um email passando informações para pagamento.</p>
+                            <p>Preencha esse formulário para fazer sua inscrição. Depois de preenchido e recebido pos nós, enviaremos um email passando informações para pagamento. 
+                            <br><br>Valor: R$25,00
+                            </p>
                         </div>
                         <div class="col s12 m8 l8 xl8 offset-m2 offset-xl2 offset-l2 ptop40">   
                             <form id="form-inscription" method="POST">    
@@ -192,9 +195,6 @@
                                 </div>    
                                 <button type="submit" class="btn mtop10 ptop20 btn-inscription-submit">Inscrever-se</button>
                             </form>
-                        </div>
-                        <div class="col s12 m6 l6 xl6 ptop40"> 
-                             
                         </div>
                     </div>
                 </div>
